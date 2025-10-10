@@ -5,7 +5,7 @@ export type Project = {
     stack: string[];
     href?: string;
 };
-
+//reference code sandbox and code pen to help flesh this section out
 
 export const projects: Project[] = [
     { id: 1, title: "Drone Telemetry Visualizer", blurb: "Real-time multi-UAS map with alerts and playback.", stack: ["Python", "Unity", "C#", "SQL", "TCP", "UDP", "FastAPI"], href: "#" },
