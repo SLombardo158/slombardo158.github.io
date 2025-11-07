@@ -114,6 +114,40 @@ export default function HomePage() {
                 </div>
             </section>
 
+            {/* Volunteering Section */}
+            <section className="container py-16">
+                <h2 className="text-3xl font-bold mb-8 text-center">Volunteering</h2>
+                <div className="exp-grid w-full flex flex-col gap-6">
+                    {[
+                        {
+                            org: "Phi Sigma Rho",
+                            positions: "Alumnae - President, Collegiate - Philanthropy Chair, Collegiate - Recruitment Chair",
+                            desc: "Organize Houston area events with STEM alumnae and raise money for collegiate scholarships.",
+                        },
+                        {
+                            org: "Girls in CS - Cougarettes",
+                            positions: "Alumnae - Mentor, Collegiate - President, Collegiate - She Codes Teacher",
+                            desc: "Revitalized org from dying during Covid, now I mentor collegiate students in the org.",
+                        },
+                        {
+                            org: "Civil Air Patrol",
+                            positions: "Flight Sergeant, Promotions Officer, Public Affairs Officer",
+                            desc: "Led a 10-person group in military drill/customs, mentored students.",
+                        },
+                    ].map((vol, idx) => (
+                        <div key={idx} className="card w-full">
+                            <div className="p-6">
+                                <h3 className="text-2xl font-semibold">{vol.org}</h3>
+                                <p className="muted">{vol.positions}</p>
+                                <p className="mt-2 muted">{vol.desc}</p>
+                                <button className="btn mt-4" onClick={() => navigate("/volunteering")}>See More...</button>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+
             {/* Education Section */}
             <section className="container py-16 text-center">
                 <h2 className="text-3xl font-bold mb-8">Education</h2>
