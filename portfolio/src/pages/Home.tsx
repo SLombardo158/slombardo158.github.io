@@ -23,7 +23,7 @@ export default function HomePage() {
                 <div className="tech-row w-full flex flex-wrap justify-center gap-4">
                     {[
                         "C++", "Python", "JavaScript", "React.js", "FastAPI", "Unity",
-                        "SQL", "Postgres", "GitHub", "Agile/Scrum", "Linux", "Robotics"
+                        "SQL", "Postgres", "GitHub", "Agile/Scrum", "Linux", "Robotics", ".NET"
                     ].map(skill => (
                         <div key={skill} className="tech-chip">{skill}</div>
                     ))}
@@ -122,7 +122,6 @@ export default function HomePage() {
                 <p className="muted mt-2">
                     GPA: 3.25 / 4.0 • 1st Place at CodeRED 2022 • Academic Excellence Scholarship
                 </p>
-                <button className="btn mt-4" onClick={() => navigate("/education")}>See More...</button>
             </section>
 
             <footer className="footer">© 2025 Shannon Lombardo * Built with React + Tailwind</footer>

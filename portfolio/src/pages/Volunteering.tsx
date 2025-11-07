@@ -1,7 +1,7 @@
-export default function Education() {
+export default function Volunteering() {
     return (
         <div className="p-8 text-white bg-gradient-to-b from-gray-900 to-black min-h-screen">
-            <h1 className="text-4xl font-bold mb-8">Education</h1>
+            <h1 className="text-4xl font-bold mb-8">Volunteering</h1>
 
             <section className="mb-8">
                 <h2 className="text-2xl font-semibold">University of Houston, Houston TX</h2>
