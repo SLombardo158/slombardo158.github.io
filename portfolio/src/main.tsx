@@ -5,7 +5,9 @@ import Home from "./pages/Home";
 import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
 import Education from "./pages/Education";
-import "./index.css";
+import "./assets/css/index.css";
+import "./assets/css/globals.css";
+import "./assets/css/home.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>

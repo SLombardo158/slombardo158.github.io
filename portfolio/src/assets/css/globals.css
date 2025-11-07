@@ -8,11 +8,11 @@
 }
 
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 html, body, #root {
-    height: 100%
+    height: 100%;
 }
 
 body {
@@ -24,13 +24,13 @@ body {
 
 a {
     color: var(--brand);
-    text-decoration: none
+    text-decoration: none;
 }
 
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 24px
+    padding: 24px;
 }
 
 .btn {
@@ -39,7 +39,7 @@ a {
     gap: 10px;
     padding: 12px 18px;
     border-radius: 14px;
-    background: linear-gradient(135deg,var(--brand),var(--accent));
+    background: linear-gradient(135deg, var(--brand), var(--accent));
     color: #001018;
     font-weight: 700;
     border: none;
@@ -49,30 +49,46 @@ a {
     .btn.secondary {
         background: #1b1f2a;
         color: var(--text);
-        border: 1px solid #2a3140
+        border: 1px solid #2a3140;
     }
 
 .panel {
     background: var(--panel);
     border: 1px solid #242a36;
     border-radius: 18px;
-    padding: 18px
+    padding: 18px;
 }
 
 .grid {
     display: grid;
-    gap: 16px
+    gap: 16px;
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
     border: 1px solid #242a36;
     border-radius: 16px;
-    padding: 18px
+    padding: 18px;
+    height: 100%;
 }
 
+    .card > div {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .card button {
+        margin-top: auto;
+        align-self: center;
+        width: auto;
+    }
+
+
 .muted {
-    color: var(--muted)
+    color: var(--muted);
 }
 
 .nav {
@@ -81,7 +97,7 @@ a {
     z-index: 30;
     background: rgba(11,12,16,.7);
     backdrop-filter: blur(8px);
-    border-bottom: 1px solid #1e2330
+    border-bottom: 1px solid #1e2330;
 }
 
 .nav-inner {
@@ -90,36 +106,36 @@ a {
     justify-content: space-between;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 12px 24px
+    padding: 12px 24px;
 }
 
 .brand {
     font-weight: 800;
-    letter-spacing: .3px
+    letter-spacing: .3px;
 }
 
 .links a {
-    margin-left: 18px
+    margin-left: 18px;
 }
 
 .hero {
     padding: 64px 24px;
     text-align: center;
     position: relative;
-    overflow: hidden
+    overflow: hidden;
 }
 
     .hero h1 {
         font-size: 44px;
         line-height: 1.1;
-        margin: 0 0 14px
+        margin: 0 0 14px;
     }
 
     .hero p {
         max-width: 780px;
         margin: 0 auto 22px;
         font-size: 18px;
-        color: var(--muted)
+        color: var(--muted);
     }
 
 .floating {
@@ -128,7 +144,7 @@ a {
     height: 320px;
     background: radial-gradient(600px 300px at 50% 50%, rgba(122, 246, 231, .18), transparent 60%), radial-gradient(500px 240px at 60% -10%, rgba(106, 180, 255, .18), transparent 60%);
     filter: blur(24px);
-    pointer-events: none
+    pointer-events: none;
 }
 
 .spotlight {
@@ -141,7 +157,7 @@ a {
     display: flex;
     gap: 14px;
     overflow: auto;
-    padding: 10px 0
+    padding: 10px 0;
 }
 
 .tech-chip {
@@ -150,13 +166,14 @@ a {
     border-radius: 999px;
     white-space: nowrap;
     font-size: 14px;
-    background: #131722
+    background: #131722;
 }
 
 .exp-grid {
     display: grid;
-    gap: 12px;
-    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    align-items: stretch;
 }
 
 .footer {
