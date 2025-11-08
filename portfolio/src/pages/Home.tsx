@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { VolunteerCard } from "../components/ui/volunteer-card";
 
 export default function HomePage() {
     const navigate = useNavigate();
@@ -117,35 +118,47 @@ export default function HomePage() {
             {/* Volunteering Section */}
             <section className="container py-16">
                 <h2 className="text-3xl font-bold mb-8 text-center">Volunteering</h2>
-                <div className="exp-grid w-full flex flex-col gap-6">
+                <div className="exp-grid w-full flex flex-wrap gap-6 justify-center">
                     {[
                         {
                             org: "Phi Sigma Rho",
-                            positions: "Alumnae - President, Collegiate - Philanthropy Chair, Collegiate - Recruitment Chair",
+                            folder: "phi-sigma-rho",
+                            positions: "Alumni - President\nCollegiate - Philanthropy Chair\nCollegiate - Recruitment Chair",
                             desc: "Organize Houston area events with STEM alumnae and raise money for collegiate scholarships.",
+                            images: [
+                                "LightTheNight",
+                                "CatsBack-TriFold",
+                                "TheBigClimb"
+                            ],
                         },
                         {
-                            org: "Girls in CS - Cougarettes",
-                            positions: "Alumnae - Mentor, Collegiate - President, Collegiate - She Codes Teacher",
+                            org: "Cougarettes",
+                            folder: "cougarettes",
+                            positions: "Alumni - Mentor\nCollegiate - President\nCollegiate - She Codes Teacher",
                             desc: "Revitalized org from dying during Covid, now I mentor collegiate students in the org.",
+                            images: [
+                                "SheCodesProgramFinish",
+                                "SheCodesGroupPhoto",
+                                "CatsBack-DrRizk"
+                            ],
                         },
                         {
                             org: "Civil Air Patrol",
-                            positions: "Flight Sergeant, Promotions Officer, Public Affairs Officer",
+                            folder: "civil-air-patrol",
+                            positions: "Flight Sergeant, Promotions Officer, Color Guard, Public Affairs Officer",
                             desc: "Led a 10-person group in military drill/customs, mentored students.",
+                            images: [
+                                "O-Flight",
+                                "ColorGuard",
+                                "Encampment-PublicAffairs"
+                            ],
                         },
                     ].map((vol, idx) => (
-                        <div key={idx} className="card w-full">
-                            <div className="p-6">
-                                <h3 className="text-2xl font-semibold">{vol.org}</h3>
-                                <p className="muted">{vol.positions}</p>
-                                <p className="mt-2 muted">{vol.desc}</p>
-                                <button className="btn mt-4" onClick={() => navigate("/volunteering")}>See More...</button>
-                            </div>
-                        </div>
+                        <VolunteerCard key={idx} {...vol} />
                     ))}
                 </div>
             </section>
+
 
 
             {/* Education Section */}
