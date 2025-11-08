@@ -1,0 +1,20 @@
+.education-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+    padding: 64px 24px;
+}
+
+.education-text-wrapper {
+    text-align: center;
+    margin-left: calc((100% - 595px) /2); /*manually setting this since I couldn't get grid to work*/
+}
+
+.education-image {
+    width: 150px;
+    height: 150px;
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: contain;
+}

@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { VolunteerCard } from "../components/ui/volunteer-card";
+import { EducationSection } from "../components/EducationSection";
+
 
 export default function HomePage() {
     const navigate = useNavigate();
@@ -162,14 +164,8 @@ export default function HomePage() {
 
 
             {/* Education Section */}
-            <section className="container py-16 text-center">
-                <h2 className="text-3xl font-bold mb-8">Education</h2>
-                <p className="font-semibold">University of Houston</p>
-                <p className="muted">B.S. Computer Science, Math Minor - May 2023</p>
-                <p className="muted mt-2">
-                    GPA: 3.25 / 4.0 • 1st Place at CodeRED 2022 • Academic Excellence Scholarship
-                </p>
-            </section>
+            <EducationSection />
+
 
             <footer className="footer">© 2025 Shannon Lombardo * Built with React + Tailwind</footer>
         </div>

@@ -225,19 +225,18 @@ a {
 
     /* Back side (image) */
     .flip-card-inner > .card-back img {
-        /*transform: rotateY(180deg);*/
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 16px;
     }
 
-/* Optional subtle pulse hint on front */
+
 .card-front {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* keep content top-aligned */
-    min-height: 220px; /* ensures a reasonable minimum */
+    justify-content: flex-start;
+    min-height: 220px;
     padding: 18px;
     animation: pulseHint 2s infinite;
 }
