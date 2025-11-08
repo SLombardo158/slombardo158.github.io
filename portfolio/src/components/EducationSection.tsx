@@ -1,4 +1,3 @@
-import React from "react";
 import "../assets/css/educationsection.css";
 
 export function EducationSection() {
